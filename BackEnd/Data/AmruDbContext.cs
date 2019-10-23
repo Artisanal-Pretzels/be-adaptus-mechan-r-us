@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using BackEnd.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,6 +23,12 @@ namespace BackEnd.Data
                 entity.Property (e => e.CreatedAt).HasDefaultValueSql ("CURRENT_TIMESTAMP").ValueGeneratedOnAdd ();
                 entity.Property (e => e.LastUpdatedAt).HasDefaultValueSql ("CURRENT_TIMESTAMP").ValueGeneratedOnAddOrUpdate ();
             });
+
+            IEnumerable<User> users = DataLoader.LoadJson<User> ("Users");
+            IEnumerable<PhoneNumber> phoneNumber = DataLoader.LoadJson<PhoneNumber> ("PhoneNumbers");
+
+            modelBuilder.Entity<User> ().HasData (users);
+            modelBuilder.Entity<PhoneNumber> ().HasData (phoneNumber);
 
         }
     }

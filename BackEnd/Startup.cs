@@ -1,4 +1,8 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using BackEnd.Data;
+using BackEnd.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -32,7 +36,7 @@ namespace BackEnd
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure (IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure (IApplicationBuilder app, IWebHostEnvironment env, AmruDbContext context)
         {
             if (env.IsDevelopment ())
             {
@@ -49,6 +53,10 @@ namespace BackEnd
             {
                 endpoints.MapControllers ();
             });
+
+            DbInitialize load = new DbInitialize (context);
+
+            var temp = context.Users;;
         }
     }
 }

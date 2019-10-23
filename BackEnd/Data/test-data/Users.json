@@ -1,0 +1,11 @@
+[
+  {
+    "UserID": "1",
+    "Username": "spanner",
+    "Password": "1234",
+    "Name": "Emile",
+    "Email": "someone@something.com",
+    "PhoneNumberID": "1",
+    "PaymentEmail": "someone@paymenow.com"
+  }
+]
