@@ -8,7 +8,7 @@
 !*/**/packages/build/
 
 # Visual Studio Code
-*/.vscode
+.vscode
 
 # Rider
 */.idea
