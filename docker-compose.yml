@@ -1,0 +1,30 @@
+version: '3.1'
+
+services:
+
+  backend:
+    build: .
+    container_name: amru_backend
+    restart: always
+    ports:
+      - 80:80
+    depends_on:
+      - db
+
+  db:
+    image: mariadb
+    container_name: amru_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: vYgpUMG5ddzRIng3wVDvskmEf3WfrOL3XbIy0809GGYMh2b
+      MYSQL_DATABASE: amru_db
+      MYSQL_USER: amru_db
+      MYSQL_PASSWORD: Zq6Ag8R3KVVOwApQ
+    ports:
+      - 3306:3306
+    volumes:
+      - 'amru_db_data:/var/lib/mysql'
+
+volumes:
+  amru_db_data:
+    driver: local
