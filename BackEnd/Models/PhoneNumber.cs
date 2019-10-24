@@ -4,7 +4,7 @@ namespace BackEnd.Models
 {
     public class PhoneNumber
     {
-        public int PhoneNumberID { get; set; }
+        public uint PhoneNumberID { get; set; }
 
         [Required]
         [StringLength (15)]

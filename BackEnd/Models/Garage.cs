@@ -6,7 +6,7 @@ namespace BackEnd.Models
 {
     public class Garage
     {
-        public int GarageID {get; set;}
+        public uint GarageID {get; set;}
 
         [Required]
         [StringLength (200)]
@@ -23,7 +23,7 @@ namespace BackEnd.Models
         public string PaymentEmail { get; set; }
 
         [Required]
-        [Column(TypeName = "decimal(5, 2)")]
+        [Column(TypeName = "double(5, 2)")]
         public double BasePrice { get; set; }
 
         public Address Address { get; set; }

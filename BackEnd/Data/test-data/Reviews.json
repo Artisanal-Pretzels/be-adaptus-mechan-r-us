@@ -1,0 +1,37 @@
+[  {
+    "ReviewID": 1,
+    "Rating": 5
+  },
+  {
+    "ReviewID": 2,
+    "Rating": 5
+  },
+  {
+    "ReviewID": 3,
+    "Rating": 2
+  },
+  {
+    "ReviewID": 4,
+    "Rating": 3
+  },
+  {
+    "ReviewID": 5,
+    "Rating": 4
+  },
+  {
+    "ReviewID": 6,
+    "Rating": 1
+  },
+  {
+    "ReviewID": 7,
+    "Rating": 4
+  },
+  {
+    "ReviewID": 8,
+    "Rating": 3
+  },
+  {
+    "ReviewID": 9,
+    "Rating": 4
+  }
+]

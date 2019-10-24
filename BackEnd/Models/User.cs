@@ -7,7 +7,7 @@ namespace BackEnd.Models
 {
     public class User
     {
-        public int UserID { get; set; }
+        public uint UserID { get; set; }
 
         [Required]
         [StringLength (200)]

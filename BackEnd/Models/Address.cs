@@ -4,7 +4,7 @@ namespace BackEnd.Models
 {
     public class Address
     {
-        public int AddressID { get; set; }
+        public uint AddressID { get; set; }
 
         [Required]
         public double Latitude { get; set; }
@@ -30,6 +30,6 @@ namespace BackEnd.Models
 
         public Garage Garage { get; set; }
 
-        public int GarageID { get; set; }
+        public uint GarageID { get; set; }
     }
 }
