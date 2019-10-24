@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BackEnd.Data
 {
+
   public class AmruDbContext : DbContext
   {
     public AmruDbContext (DbContextOptions<AmruDbContext> options) : base (options) { }
