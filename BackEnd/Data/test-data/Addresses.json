@@ -1,0 +1,84 @@
+[
+  {
+    "AddressID": 1,
+    "Latitude": -2.694592,
+    "Longitude": -14.284726,
+    "LineOne": "159 Irving Street",
+    "LineTwo": "proident",
+    "County": " Colorado",
+    "Postcode": "sunt",
+       "GarageID": 1
+  },
+  {
+    "AddressID": 2,
+    "Latitude": -1.662758,
+    "Longitude": 39.233746,
+    "LineOne": "909 Louisa Street",
+    "LineTwo": "quis",
+    "County": " Wisconsin",
+    "Postcode": "do","GarageID": 2
+  },
+  {
+    "AddressID": 3,
+    "Latitude": -1.896009,
+    "Longitude": -48.584065,
+    "LineOne": "885 Oxford Walk",
+    "LineTwo": "laborum",
+    "County": " Texas",
+    "Postcode": "in","GarageID": 3
+  },
+  {
+    "AddressID": 4,
+    "Latitude": 0.187475,
+    "Longitude": 23.450187,
+    "LineOne": "217 Dunne Place",
+    "LineTwo": "exercitation",
+    "County": " Arizona",
+    "Postcode": "laboris","GarageID": 4
+  },
+  {
+    "AddressID": 5,
+    "Latitude": -4.758078,
+    "Longitude": -8.656041,
+    "LineOne": "165 Kimball Street",
+    "LineTwo": "nostrud",
+    "County": " Virgin Islands",
+    "Postcode": "duis","GarageID": 5
+  },
+  {
+    "AddressID": 6,
+    "Latitude": -2.613923,
+    "Longitude": -38.573398,
+    "LineOne": "255 Bedell Lane",
+    "LineTwo": "irure",
+    "County": " North Dakota",
+    "Postcode": "id","GarageID": 6
+  },
+  {
+    "AddressID": 7,
+    "Latitude": -3.443646,
+    "Longitude": -16.477741,
+    "LineOne": "566 Clay Street",
+    "LineTwo": "dolore",
+    "County": " Puerto Rico",
+    "Postcode": "some","GarageID": 7
+  },
+  {
+    "AddressID": 8,
+    "Latitude": 0.370738,
+    "Longitude": -35.696265,
+    "LineOne": "755 Kings Place",
+    "LineTwo": "laborum",
+    "County": " Alaska",
+    "Postcode": "officia","GarageID": 8
+  },
+  {
+    "AddressID": 9,
+    "Latitude": -2.89383,
+    "Longitude": -22.981099,
+    "LineOne": "250 Fleet Street",
+    "LineTwo": "ipsum",
+    "County": " Nebraska",
+    "Postcode": "sit","GarageID": 9
+  }
+]

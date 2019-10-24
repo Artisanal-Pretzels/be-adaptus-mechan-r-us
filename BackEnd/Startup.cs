@@ -56,7 +56,8 @@ namespace BackEnd
 
             DbInitialize load = new DbInitialize (context);
 
-            var temp = context.Users.Include(u => u.PhoneNumber);
+            var temp = context.Users.Include(u => u.PhoneNumber).Include(u => u.Review);
+            var temp2 = context.Garages.Include(u => u.Address).Include(u => u.Invoice).Include(u => u.Review);
         }
     }
 }

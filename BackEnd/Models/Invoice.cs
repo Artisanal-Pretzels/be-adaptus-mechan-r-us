@@ -1,19 +1,19 @@
-using System.ComponentModel.DataAnnotations;
 using System;
-
+using System.ComponentModel.DataAnnotations;
 
 namespace BackEnd.Models
 {
-    public class PhoneNumber
+    public class Invoice
     {
-        public uint PhoneNumberID { get; set; }
-
-        [Required]
-        [StringLength (15)]
-        public string Number { get; set; }
+        public uint InvoiceID { get; set; }
 
         public User User { get; set; }
+
         public uint UserID { get; set; }
+
+        public Garage Garage { get; set; }
+
+        public uint GarageID { get; set; }
 
         [DataType (DataType.Date)]
         public DateTime CreatedAt { get; set; }
