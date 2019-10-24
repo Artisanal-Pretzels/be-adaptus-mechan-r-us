@@ -1,7 +1,7 @@
-using System.Runtime.InteropServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using BackEnd.Data;
 using BackEnd.Models;
 using Microsoft.AspNetCore.Builder;
@@ -13,52 +13,52 @@ using Microsoft.Extensions.Hosting;
 
 namespace BackEnd
 {
-    public class Startup
+  public class Startup
+  {
+    public Startup (IConfiguration configuration)
     {
-        public Startup (IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+      Configuration = configuration;
+    }
 
-        public IConfiguration Configuration { get; }
+    public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices (IServiceCollection services)
-        {
+    // This method gets called by the runtime. Use this method to add services to the container.
+    public void ConfigureServices (IServiceCollection services)
+    {
 
 #if DEBUG
-            services.AddDbContext<AmruDbContext> (options =>
-                options.UseMySql (Configuration.GetConnectionString ("DevConnection")));
+      services.AddDbContext<AmruDbContext> (options =>
+        options.UseMySql (Configuration.GetConnectionString ("DevConnection")));
 #else
-            services.AddDbContext<AmruDbContext> (options =>
-                options.UseMySql (Configuration.GetConnectionString ("DefaultConnection"), opt => opt.EnableRetryOnFailure()));
+      services.AddDbContext<AmruDbContext> (options =>
+        options.UseMySql (Configuration.GetConnectionString ("DefaultConnection"), opt => opt.EnableRetryOnFailure ()));
 #endif
-            services.AddControllers ();
-        }
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure (IApplicationBuilder app, IWebHostEnvironment env, AmruDbContext context)
-        {
-            if (env.IsDevelopment ())
-            {
-                app.UseDeveloperExceptionPage ();
-            }
-
-            app.UseHttpsRedirection ();
-
-            app.UseRouting ();
-
-            app.UseAuthorization ();
-
-            app.UseEndpoints (endpoints =>
-            {
-                endpoints.MapControllers ();
-            });
-
-            DbInitialize load = new DbInitialize (context);
-
-            var temp = context.Users.Include(u => u.PhoneNumber).Include(u => u.Review);
-            var temp2 = context.Garages.Include(u => u.Address).Include(u => u.Invoice).Include(u => u.Review);
-        }
+      services.AddControllers ();
     }
+
+    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+    public void Configure (IApplicationBuilder app, IWebHostEnvironment env, AmruDbContext context)
+    {
+      if (env.IsDevelopment ())
+      {
+        app.UseDeveloperExceptionPage ();
+      }
+
+      app.UseHttpsRedirection ();
+
+      app.UseRouting ();
+
+      app.UseAuthorization ();
+
+      app.UseEndpoints (endpoints =>
+      {
+        endpoints.MapControllers ();
+      });
+
+      DbInitialize load = new DbInitialize (context);
+
+      var temp = context.Users.Include (u => u.PhoneNumber).Include (u => u.Review);
+      var temp2 = context.Garages.Include (u => u.Address).Include (u => u.Invoice).Include (u => u.Review);
+    }
+  }
 }
