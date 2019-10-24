@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,7 @@ namespace BackEnd
                 options.UseMySql (Configuration.GetConnectionString ("DevConnection")));
 #else
             services.AddDbContext<AmruDbContext> (options =>
-                options.UseMySql (Configuration.GetConnectionString ("DefaultConnection")));
+                options.UseMySql (Configuration.GetConnectionString ("DefaultConnection"), opt => opt.EnableRetryOnFailure()));
 #endif
             services.AddControllers ();
         }
