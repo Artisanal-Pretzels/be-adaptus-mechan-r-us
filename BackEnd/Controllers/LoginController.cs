@@ -27,7 +27,7 @@ namespace BackEnd.Controllers
     [HttpPost]
     public async Task<IActionResult> Post(UserLogin request)
     {
-      User user = _context.Users.Include(u => u.PhoneNumber).SingleOrDefault(u => u.Username == request.Username);
+      User user = await _context.Users.Include(u => u.PhoneNumber).SingleOrDefaultAsync(u => u.Username == request.Username);
 
       if (user == null)
       {
