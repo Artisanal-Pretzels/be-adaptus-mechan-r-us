@@ -467,6 +467,7 @@ namespace BackEnd.Migrations
                         .HasColumnType("varchar(15)")
                         .HasMaxLength(15);
 
+
                     b.Property<uint>("UserID")
                         .HasColumnType("int unsigned");
 
@@ -480,6 +481,7 @@ namespace BackEnd.Migrations
                     b.HasData(
                         new
                         {
+
                             PhoneNumberID = 1u,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -679,6 +681,7 @@ namespace BackEnd.Migrations
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Rating = 4.0,
                             UserID = 9u
+
                         });
                 });
 
@@ -687,6 +690,7 @@ namespace BackEnd.Migrations
                     b.Property<uint>("UserID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int unsigned");
+
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
@@ -731,6 +735,7 @@ namespace BackEnd.Migrations
                         new
                         {
                             UserID = 1u,
+
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "reillyholden@jamnation.com",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -829,6 +834,7 @@ namespace BackEnd.Migrations
                         });
                 });
 
+
             modelBuilder.Entity("BackEnd.Models.Address", b =>
                 {
                     b.HasOne("BackEnd.Models.Garage", "Garage")
@@ -852,7 +858,7 @@ namespace BackEnd.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
-
+                
             modelBuilder.Entity("BackEnd.Models.PhoneNumber", b =>
                 {
                     b.HasOne("BackEnd.Models.User", "User")
@@ -861,6 +867,7 @@ namespace BackEnd.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
+
 
             modelBuilder.Entity("BackEnd.Models.Review", b =>
                 {
@@ -876,6 +883,7 @@ namespace BackEnd.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
+
 #pragma warning restore 612, 618
         }
     }

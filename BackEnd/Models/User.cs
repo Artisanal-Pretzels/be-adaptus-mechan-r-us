@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ namespace BackEnd.Models
 {
     public class User
     {
+
         public uint UserID { get; set; }
 
         [Required]
@@ -37,6 +39,7 @@ namespace BackEnd.Models
         public ICollection<Invoice> Invoice { get; set; }
 
         public ICollection<Review> Review { get; set; }
+
 
         [DataType (DataType.Date)]
         public DateTime CreatedAt { get; set; }

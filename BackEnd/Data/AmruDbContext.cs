@@ -11,6 +11,7 @@ namespace BackEnd.Data
         public DbSet<User> Users { get; set; }
         public DbSet<PhoneNumber> PhoneNumbers { get; set; }
 
+
         public DbSet<Garage> Garages { get; set; }
 
         public DbSet<Review> Reviews { get; set; }
@@ -25,6 +26,7 @@ namespace BackEnd.Data
 
             modelBuilder.Entity<User> ().ToTable ("Users");
             modelBuilder.Entity<PhoneNumber> ().ToTable ("PhoneNumbers");
+
             modelBuilder.Entity<Garage> ().ToTable ("Garages");
             modelBuilder.Entity<Review> ().ToTable ("Reviews");
             modelBuilder.Entity<Address> ().ToTable ("Addresses");
@@ -79,6 +81,7 @@ namespace BackEnd.Data
             modelBuilder.Entity<Review> ().HasData (reviews);
             modelBuilder.Entity<Address> ().HasData(addresses);
             modelBuilder.Entity<Invoice> ().HasData(invoices);
+
 
         }
     }
