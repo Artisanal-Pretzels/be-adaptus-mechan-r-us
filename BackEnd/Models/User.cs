@@ -1,7 +1,9 @@
+using System.Collections;
 using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 
 namespace BackEnd.Models
 {
@@ -31,6 +33,10 @@ namespace BackEnd.Models
         [Required]
         [StringLength (200)]
         public string PaymentEmail { get; set; }
+
+        public ICollection<Invoice> Invoice { get; set; }
+
+        public ICollection<Review> Review { get; set; }
 
         [DataType (DataType.Date)]
         public DateTime CreatedAt { get; set; }

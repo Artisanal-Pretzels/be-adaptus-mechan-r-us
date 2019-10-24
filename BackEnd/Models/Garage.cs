@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System;
 
 namespace BackEnd.Models
 {
@@ -13,7 +14,7 @@ namespace BackEnd.Models
         public string GarageName { get; set; }
 
         [Required]
-        [StringLength (500)]
+        [StringLength (1000)]
         public string Description { get; set; }
 
         public string ImagePath { get; set; }
@@ -32,5 +33,10 @@ namespace BackEnd.Models
 
         public ICollection<Review> Review { get; set; }
 
+        [DataType (DataType.Date)]
+        public DateTime CreatedAt { get; set; }
+
+        [DataType (DataType.Date)]
+        public DateTime LastUpdatedAt { get; set; }
     }
 }

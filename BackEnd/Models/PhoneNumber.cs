@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System;
 
 namespace BackEnd.Models
 {
@@ -10,7 +11,13 @@ namespace BackEnd.Models
         [StringLength (15)]
         public string Number { get; set; }
 
-        public int UserID { get; set; }
         public User User { get; set; }
+        public uint UserID { get; set; }
+
+        [DataType (DataType.Date)]
+        public DateTime CreatedAt { get; set; }
+
+        [DataType (DataType.Date)]
+        public DateTime LastUpdatedAt { get; set; }
     }
 }

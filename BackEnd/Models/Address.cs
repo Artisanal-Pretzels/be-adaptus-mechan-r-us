@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System;
 
 namespace BackEnd.Models
 {
@@ -31,5 +32,11 @@ namespace BackEnd.Models
         public Garage Garage { get; set; }
 
         public uint GarageID { get; set; }
+
+        [DataType (DataType.Date)]
+        public DateTime CreatedAt { get; set; }
+
+        [DataType (DataType.Date)]
+        public DateTime LastUpdatedAt { get; set; }
     }
 }
