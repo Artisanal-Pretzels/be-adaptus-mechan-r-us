@@ -37,3 +37,6 @@
 
 # Visual Studio 2015
 */.vs/
+
+#API Key
+*/ApiKey.cs
