@@ -5,13 +5,16 @@ using GoogleApi.Entities.Common;
 using GoogleApi;
 using GoogleApi.Entities.Maps.DistanceMatrix.Request;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace GoogleApiRequests
 {
   public static class DistanceMatrix
   {
-    public static async Task<dynamic> GetGarageDistances(double longitude, double latitude, List<GarageDestinationLocation> garageLocations)
+    public static async Task<List<dynamic>> GetGarageDistances(double longitude, double latitude, List<GarageDestinationLocation> garageLocations)
     {
+
+
 
       var request = new DistanceMatrixRequest
         {
@@ -21,7 +24,9 @@ namespace GoogleApiRequests
         };
 
       var response = await GoogleMaps.DistanceMatrix.QueryAsync(request);
-      return response;
+      IEnumerable<dynamic> something = response.Rows.First().Elements;
+
+      return something.ToList();
     }
 
     public static Collection<Location> getLocations(List<GarageDestinationLocation> garageLocations)

@@ -26,7 +26,7 @@ namespace BackEnd.Controllers
 
     [Route("distance")]
     [HttpGet]
-    public async Task<ActionResult<List<dynamic>>> GetGarages([FromQuery] UserLocation location)
+    public async Task<ActionResult<List<GarageDistanceDTO>>> GetGarages([FromQuery] UserLocation location)
     {
       double latitude = location.latitude;
       double longitude = location.longitude;
@@ -59,20 +59,34 @@ namespace BackEnd.Controllers
           });
       }
 
-      var distances = await DistanceMatrix.GetGarageDistances(longitude, latitude, garageLocations);
+      List<dynamic> distances = await DistanceMatrix.GetGarageDistances(longitude, latitude, garageLocations);
 
-      return distances;
-        // .Select(g => new GarageAddressDTO
-        // {
-        //   GarageID = g.GarageID,
-        //   GarageName = g.GarageName,
-        //   BasePrice = g.BasePrice,
-        //   Latitude = g.Address.Latitude,
-        //   Longitude = g.Address.Longitude,
-        //   ReviewOverview = g.Review.Average(g => g.Rating)
-        // });
+      List<GarageDistanceDTO> garageDistances = new List<GarageDistanceDTO>();
 
+      int count = 0;
 
+      foreach (var garage in localGarages)
+      {
+        DistanceDTO dist = new DistanceDTO
+        {
+          Duration = distances[count].Duration.Text,
+          DurationTraffic = distances[count].DurationInTraffic.Text,
+          Distance = distances[count].Distance.Text
+        };
+        
+        garageDistances.Add(new GarageDistanceDTO
+        {
+          GarageID = garage.GarageID,
+          GarageName = garage.GarageName,
+          Ratings = garage.Review.Average(e => e.Rating),
+          BasePrice = garage.BasePrice,
+          Distance = dist
+        });
+
+        count++;
+      }
+
+      return garageDistances;
     }
   }
 }
