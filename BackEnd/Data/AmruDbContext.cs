@@ -64,7 +64,7 @@ namespace BackEnd.Data
       modelBuilder.Entity<Invoice> (entity =>
       {
         entity.Property (e => e.CreatedAt).HasDefaultValueSql ("CURRENT_TIMESTAMP").ValueGeneratedOnAdd ();
-        entity.Property (e => e.LastUpdatedAt).HasDefaultValueSql ("CURRENT_TIMESTAMP").ValueGeneratedOnAddOrUpdate ();
+        entity.Property (e => e.LastUpdatedAt).HasDefaultValueSql ("NOW()").ValueGeneratedOnAddOrUpdate();
       });
 
       IEnumerable<User> users = DataLoader.LoadJson<User> ("Users");
