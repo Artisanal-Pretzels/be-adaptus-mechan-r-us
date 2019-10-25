@@ -2,7 +2,7 @@ namespace FrontEndRequests
 {
   public class UserLocation
   {
-    public int id { get; set; }
+    public double increment { get; set; } = 1;
 
     public double longitude { get; set; }
 
