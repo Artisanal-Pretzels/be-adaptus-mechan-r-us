@@ -8,6 +8,8 @@ using FrontEndRequests;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using GoogleApiRequests;
+
 
 namespace BackEnd.Controllers
 {
@@ -24,7 +26,7 @@ namespace BackEnd.Controllers
 
     [Route("distance")]
     [HttpGet]
-    public async Task<ActionResult<List<GarageAddressDTO>>> GetGarages([FromQuery] UserLocation location)
+    public async Task<ActionResult<List<dynamic>>> GetGarages([FromQuery] UserLocation location)
     {
       double latitude = location.latitude;
       double longitude = location.longitude;
@@ -44,6 +46,22 @@ namespace BackEnd.Controllers
         && garage.Address.Longitude < maxLong
         && garage.Address.Longitude > minLong)
         .ToListAsync();
+
+      List<GarageDestinationLocation> garageLocations = new List<GarageDestinationLocation>();
+
+      foreach (var garage in localGarages)
+      {
+          garageLocations.Add(new GarageDestinationLocation
+          {
+            GarageID = garage.GarageID,
+            Longitude = garage.Address.Longitude,
+            Latitude = garage.Address.Latitude
+          });
+      }
+
+      var distances = await DistanceMatrix.GetGarageDistances(longitude, latitude, garageLocations);
+
+      return distances;
         // .Select(g => new GarageAddressDTO
         // {
         //   GarageID = g.GarageID,

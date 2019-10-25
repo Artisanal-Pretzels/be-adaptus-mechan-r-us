@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FrontEndRequests\FrontEndRequests.csproj" />
+    <ProjectReference Include="..\GoogleApiRequests\GoogleApiRequests.csproj" />
   </ItemGroup>
 
   <ItemGroup>
