@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BackEnd.Migrations
 {
     [DbContext(typeof(AmruDbContext))]
-    [Migration("20191025143433_InitialCreate")]
+    [Migration("20191026120003_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -228,7 +228,13 @@ namespace BackEnd.Migrations
                         .HasColumnType("varchar(256)")
                         .HasMaxLength(256);
 
+                    b.Property<uint>("UserID")
+                        .HasColumnType("int unsigned");
+
                     b.HasKey("GarageID");
+
+                    b.HasIndex("UserID")
+                        .IsUnique();
 
                     b.ToTable("Garages");
 
@@ -243,7 +249,8 @@ namespace BackEnd.Migrations
                             GarageName = "commodo",
                             ImagePath = "http://placehold.it/32x32",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PaymentEmail = "reillyholden@jamnation.com"
+                            PaymentEmail = "reillyholden@jamnation.com",
+                            UserID = 1u
                         },
                         new
                         {
@@ -255,7 +262,8 @@ namespace BackEnd.Migrations
                             GarageName = "sunt",
                             ImagePath = "http://placehold.it/32x32",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PaymentEmail = "reillyholden@jamnation.com"
+                            PaymentEmail = "reillyholden@jamnation.com",
+                            UserID = 2u
                         },
                         new
                         {
@@ -267,7 +275,8 @@ namespace BackEnd.Migrations
                             GarageName = "duis",
                             ImagePath = "http://placehold.it/32x32",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PaymentEmail = "reillyholden@jamnation.com"
+                            PaymentEmail = "reillyholden@jamnation.com",
+                            UserID = 3u
                         },
                         new
                         {
@@ -279,7 +288,8 @@ namespace BackEnd.Migrations
                             GarageName = "aliquip",
                             ImagePath = "http://placehold.it/32x32",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PaymentEmail = "reillyholden@jamnation.com"
+                            PaymentEmail = "reillyholden@jamnation.com",
+                            UserID = 4u
                         },
                         new
                         {
@@ -291,7 +301,8 @@ namespace BackEnd.Migrations
                             GarageName = "sunt",
                             ImagePath = "http://placehold.it/32x32",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PaymentEmail = "reillyholden@jamnation.com"
+                            PaymentEmail = "reillyholden@jamnation.com",
+                            UserID = 5u
                         },
                         new
                         {
@@ -303,7 +314,8 @@ namespace BackEnd.Migrations
                             GarageName = "sunt",
                             ImagePath = "http://placehold.it/32x32",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PaymentEmail = "reillyholden@jamnation.com"
+                            PaymentEmail = "reillyholden@jamnation.com",
+                            UserID = 6u
                         },
                         new
                         {
@@ -315,7 +327,8 @@ namespace BackEnd.Migrations
                             GarageName = "in",
                             ImagePath = "http://placehold.it/32x32",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PaymentEmail = "reillyholden@jamnation.com"
+                            PaymentEmail = "reillyholden@jamnation.com",
+                            UserID = 7u
                         },
                         new
                         {
@@ -327,7 +340,8 @@ namespace BackEnd.Migrations
                             GarageName = "esse",
                             ImagePath = "http://placehold.it/32x32",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PaymentEmail = "reillyholden@jamnation.com"
+                            PaymentEmail = "reillyholden@jamnation.com",
+                            UserID = 8u
                         },
                         new
                         {
@@ -339,7 +353,8 @@ namespace BackEnd.Migrations
                             GarageName = "ut",
                             ImagePath = "http://placehold.it/32x32",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PaymentEmail = "reillyholden@jamnation.com"
+                            PaymentEmail = "reillyholden@jamnation.com",
+                            UserID = 9u
                         });
                 });
 
@@ -551,6 +566,14 @@ namespace BackEnd.Migrations
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Number = "(832) 409-3078",
                             UserID = 9u
+                        },
+                        new
+                        {
+                            PhoneNumberID = 10u,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Number = "(848749-3078",
+                            UserID = 10u
                         });
                 });
 
@@ -828,6 +851,17 @@ namespace BackEnd.Migrations
                             Password = "cillum",
                             PaymentEmail = "reillyholden@jamnation.com",
                             Username = "anim"
+                        },
+                        new
+                        {
+                            UserID = 10u,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "reillyholden@jamnation.com",
+                            LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "user only",
+                            Password = "woooo",
+                            PaymentEmail = "reillyholden@jamnation.com",
+                            Username = "no garage"
                         });
                 });
 
@@ -836,6 +870,15 @@ namespace BackEnd.Migrations
                     b.HasOne("BackEnd.Models.Garage", "Garage")
                         .WithOne("Address")
                         .HasForeignKey("BackEnd.Models.Address", "GarageID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("BackEnd.Models.Garage", b =>
+                {
+                    b.HasOne("BackEnd.Models.User", "User")
+                        .WithOne("Garage")
+                        .HasForeignKey("BackEnd.Models.Garage", "UserID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
