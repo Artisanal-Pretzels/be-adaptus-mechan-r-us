@@ -1,0 +1,82 @@
+{
+  "/api": {
+    "GET:": {
+      "description": "serves up a json representation of all the available endpoints of the api"
+    }
+  },
+  "/api/login": {
+    "POST:": {
+      "description": "logs user in and returns UserDTO. GarageID is null if only an end user",
+      "queries": [],
+      "exampleRequestBody": {
+        "username": "dolore",
+        "password": "aliqua"
+      },
+      "exampleResponse": {
+        "userID": 3,
+        "username": "dolore",
+        "name": "ut",
+        "email": "reillyholden@jamnation.com",
+        "phoneNumber": "(816) 448-2524",
+        "garageID": 3
+      }
+    }
+  },
+  "/api/user/:id": {
+    "GET:": {
+      "description": "returns UserDTO specified by id",
+      "queries": [],
+      "exampleResponse": {
+        "userID": 2,
+        "username": "labore",
+        "name": "labore",
+        "email": "reillyholden@jamnation.com",
+        "phoneNumber": "(920) 558-2158",
+        "garageID": 2
+      }
+    }
+  },
+  "/api/garage/:id": {
+    "GET:": {
+      "description": "returns GarageDTO specified by id",
+      "queries": [],
+      "exampleResponse": {}
+    }
+  },
+  "/api/locations/:id": {
+    "GET:": {
+      "description": "serves up an article specified by article id",
+      "queries": [],
+      "exampleResponse": {
+        "article": {
+          "article_id": 1,
+          "title": "Running a Node App",
+          "body": "This is part two of a series on how to get up and running with Systemd and Node.js. This part dives deeper into how to successfully run your app with systemd long-term, and how to set it up in a production environment.",
+          "votes": 0,
+          "topic": "coding",
+          "author": "jessjelly",
+          "created_at": "2016-08-18T12:07:52.389Z",
+          "comment_count": "8"
+        }
+      }
+    }
+  },
+  "/api/registration": {
+    "GET:": {
+      "description": "serves up an article specified by article id",
+      "queries": [],
+      "exampleResponse": {
+        "article": {
+          "article_id": 1,
+          "title": "Running a Node App",
+          "body": "This is part two of a series on how to get up and running with Systemd and Node.js. This part dives deeper into how to successfully run your app with systemd long-term, and how to set it up in a production environment.",
+          "votes": 0,
+          "topic": "coding",
+          "author": "jessjelly",
+          "created_at": "2016-08-18T12:07:52.389Z",
+          "comment_count": "8"
+        }
+      }
+    }
+  }
+}

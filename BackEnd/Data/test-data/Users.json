@@ -79,5 +79,14 @@
     "Email": "reillyholden@jamnation.com",
     "PhoneNumberID": 9,
     "PaymentEmail": "reillyholden@jamnation.com"
+  },
+  {
+    "UserID": 10,
+    "Username": "no garage",
+    "Password": "woooo",
+    "Name": "user only",
+    "Email": "reillyholden@jamnation.com",
+    "PhoneNumberID": 10,
+    "PaymentEmail": "reillyholden@jamnation.com"
   }
 ]
