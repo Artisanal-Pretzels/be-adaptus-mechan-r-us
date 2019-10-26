@@ -23,6 +23,8 @@ namespace BackEnd.Controllers
     {
       Garage garage = await _context.Garages
                                 .Include(g => g.Address)
+                                .Include(g => g.User)
+                                    .ThenInclude(u => u.PhoneNumber)
                                 .Include(g => g.Invoice)
                                     .ThenInclude(i => i.User)
                                 .Include(g => g.Review)
@@ -64,6 +66,7 @@ namespace BackEnd.Controllers
         Description = garage.Description,
         ImagePath = garage.ImagePath,
         BasePrice = garage.BasePrice,
+        PhoneNumber = garage.User.PhoneNumber.Number,
         Address = new AddressDTO()
         {
           LineOne = garage.Address.LineOne,

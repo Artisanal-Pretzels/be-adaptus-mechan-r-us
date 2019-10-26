@@ -27,7 +27,7 @@ namespace BackEnd.Controllers
     [HttpPost]
     public async Task<IActionResult> Post(UserLogin request)
     {
-      User user = await _context.Users.Include(u => u.PhoneNumber).SingleOrDefaultAsync(u => u.Username == request.Username);
+      User user = await _context.Users.Include(u => u.PhoneNumber).Include(g => g.Garage).SingleOrDefaultAsync(u => u.Username == request.Username);
 
       if (user == null)
       {
@@ -46,6 +46,7 @@ namespace BackEnd.Controllers
         Name = user.Name,
         Email = user.Email,
         PhoneNumber = user.PhoneNumber.Number,
+        GarageID = user.Garage?.GarageID
       };
 
       return Ok(userDto);

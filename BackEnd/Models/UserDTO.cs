@@ -12,5 +12,7 @@ namespace BackEnd.Models
 
     public string PhoneNumber { get; set; }
 
+    public uint? GarageID { get; set; }
+
   }
 }

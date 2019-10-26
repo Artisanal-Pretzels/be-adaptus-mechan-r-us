@@ -8,7 +8,7 @@ namespace BackEnd.Data
 
   public class AmruDbContext : DbContext
   {
-    public AmruDbContext (DbContextOptions<AmruDbContext> options) : base (options) { }
+    public AmruDbContext(DbContextOptions<AmruDbContext> options) : base(options) { }
 
     public DbSet<User> Users { get; set; }
     public DbSet<PhoneNumber> PhoneNumbers { get; set; }
@@ -21,7 +21,7 @@ namespace BackEnd.Data
 
     public DbSet<Invoice> Invoices { get; set; }
 
-    protected override void OnModelCreating (ModelBuilder modelBuilder)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
       base.OnModelCreating (modelBuilder);
 

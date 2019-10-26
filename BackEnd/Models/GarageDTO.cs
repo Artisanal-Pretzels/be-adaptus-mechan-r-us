@@ -14,6 +14,8 @@ namespace BackEnd.Models
 
     public double BasePrice { get; set; }
 
+    public string PhoneNumber { get; set; }
+
     public AddressDTO Address { get; set; }
 
     public ICollection<InvoiceDTO> Invoices { get; set; }

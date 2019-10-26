@@ -10,33 +10,36 @@ namespace BackEnd.Models
     public uint GarageID { get; set; }
 
     [Required]
-    [StringLength (200)]
+    [StringLength(200)]
     public string GarageName { get; set; }
 
     [Required]
-    [StringLength (1000)]
+    [StringLength(1000)]
     public string Description { get; set; }
 
     public string ImagePath { get; set; }
 
     [Required]
-    [StringLength (256)]
+    [StringLength(256)]
     public string PaymentEmail { get; set; }
 
     [Required]
-    [Column (TypeName = "double(5, 2)")]
+    [Column(TypeName = "double(5, 2)")]
     public double BasePrice { get; set; }
 
     public Address Address { get; set; }
+
+    public User User { get; set; }
+    public uint UserID { get; set; }
 
     public ICollection<Invoice> Invoice { get; set; }
 
     public ICollection<Review> Review { get; set; }
 
-    [DataType (DataType.Date)]
+    [DataType(DataType.Date)]
     public DateTime CreatedAt { get; set; }
 
-    [DataType (DataType.Date)]
+    [DataType(DataType.Date)]
     public DateTime LastUpdatedAt { get; set; }
   }
 }
