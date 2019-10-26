@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontEndRequests", "FrontEn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleApiRequests", "GoogleApiRequests\GoogleApiRequests.csproj", "{34B5E58C-7CDD-421C-891E-0070524F65A1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{CC7A9310-F809-11E9-9EB1-A978274987E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackEndTests", "tests\BackEndTests\BackEndTests.csproj", "{A1D27903-4607-4308-9E35-71ED8BB36EE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,7 +62,20 @@ Global
 		{34B5E58C-7CDD-421C-891E-0070524F65A1}.Release|x64.Build.0 = Release|Any CPU
 		{34B5E58C-7CDD-421C-891E-0070524F65A1}.Release|x86.ActiveCfg = Release|Any CPU
 		{34B5E58C-7CDD-421C-891E-0070524F65A1}.Release|x86.Build.0 = Release|Any CPU
+		{A1D27903-4607-4308-9E35-71ED8BB36EE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1D27903-4607-4308-9E35-71ED8BB36EE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1D27903-4607-4308-9E35-71ED8BB36EE9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A1D27903-4607-4308-9E35-71ED8BB36EE9}.Debug|x64.Build.0 = Debug|Any CPU
+		{A1D27903-4607-4308-9E35-71ED8BB36EE9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A1D27903-4607-4308-9E35-71ED8BB36EE9}.Debug|x86.Build.0 = Debug|Any CPU
+		{A1D27903-4607-4308-9E35-71ED8BB36EE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1D27903-4607-4308-9E35-71ED8BB36EE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1D27903-4607-4308-9E35-71ED8BB36EE9}.Release|x64.ActiveCfg = Release|Any CPU
+		{A1D27903-4607-4308-9E35-71ED8BB36EE9}.Release|x64.Build.0 = Release|Any CPU
+		{A1D27903-4607-4308-9E35-71ED8BB36EE9}.Release|x86.ActiveCfg = Release|Any CPU
+		{A1D27903-4607-4308-9E35-71ED8BB36EE9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{A1D27903-4607-4308-9E35-71ED8BB36EE9} = {CC7A9310-F809-11E9-9EB1-A978274987E0}
 	EndGlobalSection
 EndGlobal
