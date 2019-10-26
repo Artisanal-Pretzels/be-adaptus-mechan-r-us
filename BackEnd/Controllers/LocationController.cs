@@ -32,20 +32,32 @@ namespace BackEnd.Controllers
       double longitude = location.longitude;
       double increment = location.increment;
 
-      double latDelta = 0.01 * increment;
-      double longDelta = 0.014 * increment;
+      List<Garage> localGarages = new List<Garage>();
 
-      double minLat = latitude - latDelta;
-      double maxLat = latitude + latDelta;
-      double minLong = longitude - longDelta;
-      double maxLong = longitude + longDelta;
+      do
+      {
 
-      List<Garage> localGarages = await _context.Garages.Include(g => g.Address).Include(g => g.Review)
-        .Where(garage => garage.Address.Latitude < maxLat
-        && garage.Address.Latitude > minLat
-        && garage.Address.Longitude < maxLong
-        && garage.Address.Longitude > minLong)
-        .ToListAsync();
+        double latDelta = 0.01 * increment;
+        double longDelta = 0.014 * increment;
+
+        double minLat = latitude - latDelta;
+        double maxLat = latitude + latDelta;
+        double minLong = longitude - longDelta;
+        double maxLong = longitude + longDelta;
+
+
+        localGarages = await _context.Garages.Include(g => g.Address).Include(g => g.Review)
+          .Where(garage => garage.Address.Latitude < maxLat
+          && garage.Address.Latitude > minLat
+          && garage.Address.Longitude < maxLong
+          && garage.Address.Longitude > minLong)
+          .ToListAsync();
+        
+        increment += 5;
+
+      } while (localGarages.Count < 5 || increment < 50);
+
+      if (localGarages.Count < 1) return new List<GarageDistanceDTO> {};
 
       List<GarageDestinationLocation> garageLocations = new List<GarageDestinationLocation>();
 

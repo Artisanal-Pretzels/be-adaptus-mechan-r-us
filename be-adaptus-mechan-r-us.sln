@@ -59,4 +59,6 @@ Global
 		{34B5E58C-7CDD-421C-891E-0070524F65A1}.Release|x86.ActiveCfg = Release|Any CPU
 		{34B5E58C-7CDD-421C-891E-0070524F65A1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
 EndGlobal
