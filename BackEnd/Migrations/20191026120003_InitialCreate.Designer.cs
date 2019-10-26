@@ -3,14 +3,16 @@ using System;
 using BackEnd.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BackEnd.Migrations
 {
     [DbContext(typeof(AmruDbContext))]
-    partial class AmruDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191026120003_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,14 +32,16 @@ namespace BackEnd.Migrations
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime(6)")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<uint>("GarageID")
                         .HasColumnType("int unsigned");
 
                     b.Property<DateTime>("LastUpdatedAt")
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime(6)")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<double>("Latitude")
                         .HasColumnType("double");
@@ -198,7 +202,8 @@ namespace BackEnd.Migrations
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime(6)")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -215,7 +220,8 @@ namespace BackEnd.Migrations
 
                     b.Property<DateTime>("LastUpdatedAt")
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime(6)")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<string>("PaymentEmail")
                         .IsRequired()
@@ -360,14 +366,16 @@ namespace BackEnd.Migrations
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime(6)")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<uint>("GarageID")
                         .HasColumnType("int unsigned");
 
                     b.Property<DateTime>("LastUpdatedAt")
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime(6)")
+                        .HasDefaultValueSql("NOW()");
 
                     b.Property<uint>("UserID")
                         .HasColumnType("int unsigned");
@@ -463,11 +471,13 @@ namespace BackEnd.Migrations
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime(6)")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<DateTime>("LastUpdatedAt")
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime(6)")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<string>("Number")
                         .IsRequired()
@@ -579,14 +589,16 @@ namespace BackEnd.Migrations
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime(6)")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<uint>("GarageID")
                         .HasColumnType("int unsigned");
 
                     b.Property<DateTime>("LastUpdatedAt")
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime(6)")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<double>("Rating")
                         .HasColumnType("double(2, 1)");
@@ -703,7 +715,8 @@ namespace BackEnd.Migrations
 
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime(6)")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -712,7 +725,8 @@ namespace BackEnd.Migrations
 
                     b.Property<DateTime>("LastUpdatedAt")
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("datetime(6)");
+                        .HasColumnType("datetime(6)")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<string>("Name")
                         .IsRequired()

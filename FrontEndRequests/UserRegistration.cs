@@ -1,10 +1,11 @@
-namespace BackEnd.Models
+namespace FrontEndRequests
 {
-  public class UserDTO
+  public class UserRegistration
   {
-    public uint UserID { get; set; }
 
     public string Username { get; set; }
+
+    public string Password { get; set; }
 
     public string Name { get; set; }
 
@@ -12,7 +13,7 @@ namespace BackEnd.Models
 
     public string PhoneNumber { get; set; }
 
-    public uint? GarageID { get; set; }
+    public string PaymentEmail { get; set; }
 
   }
 }
