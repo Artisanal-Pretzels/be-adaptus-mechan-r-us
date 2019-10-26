@@ -44,6 +44,7 @@ namespace BackEnd.Controllers
         Name = newUser.Name,
         Email = newUser.Email,
         PhoneNumber = newUser.PhoneNumber.Number,
+        GarageID = newUser.Garage?.GarageID
       };
 
       return Ok(userDto);

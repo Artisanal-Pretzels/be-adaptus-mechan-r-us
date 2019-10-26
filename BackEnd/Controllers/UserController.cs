@@ -21,20 +21,22 @@ namespace BackEnd.Controllers
     [HttpGet("{id}")]
     public async Task<ActionResult<UserDTO>> GetUser(uint id)
     {
-      UserDTO userDto = await _context.Users.Include(u => u.PhoneNumber).Select(u =>
-                new UserDTO()
-                {
-                  UserID = u.UserID,
-                  Username = u.Username,
-                  Name = u.Name,
-                  Email = u.Email,
-                  PhoneNumber = u.PhoneNumber.Number,
-                }).SingleOrDefaultAsync(u => u.UserID == id);
+      User user = await _context.Users.Include(u => u.PhoneNumber).Include(u => u.Garage).SingleOrDefaultAsync(u => u.UserID == id);
 
-      if (userDto == null)
+      if (user == null)
       {
         return NotFound();
       }
+
+      UserDTO userDto = new UserDTO()
+      {
+        UserID = user.UserID,
+        Username = user.Username,
+        Name = user.Name,
+        Email = user.Email,
+        PhoneNumber = user.PhoneNumber.Number,
+        GarageID = user.Garage?.GarageID
+      };
 
       return userDto;
     }
