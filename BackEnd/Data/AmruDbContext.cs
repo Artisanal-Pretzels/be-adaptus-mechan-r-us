@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using BackEnd.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace BackEnd.Data
 {
@@ -33,38 +34,68 @@ namespace BackEnd.Data
 
       modelBuilder.Entity<User> (entity =>
       {
-        entity.Property (e => e.CreatedAt).HasDefaultValueSql ("CURRENT_TIMESTAMP").ValueGeneratedOnAdd ();
-        entity.Property (e => e.LastUpdatedAt).HasDefaultValueSql ("CURRENT_TIMESTAMP").ValueGeneratedOnAddOrUpdate ();
+        entity.Property (e => e.CreatedAt).ValueGeneratedOnAdd ();
+        entity.Property (e => e.LastUpdatedAt).ValueGeneratedOnAddOrUpdate ();
+
+        entity.Property(e => e.CreatedAt).Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
+        entity.Property(e => e.CreatedAt).Metadata.SetAfterSaveBehavior(PropertySaveBehavior.Ignore);
+        entity.Property(e => e.LastUpdatedAt).Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
+        entity.Property(e => e.LastUpdatedAt).Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
       });
 
       modelBuilder.Entity<PhoneNumber> (entity =>
       {
-        entity.Property (e => e.CreatedAt).HasDefaultValueSql ("CURRENT_TIMESTAMP").ValueGeneratedOnAdd ();
-        entity.Property (e => e.LastUpdatedAt).HasDefaultValueSql ("CURRENT_TIMESTAMP").ValueGeneratedOnAddOrUpdate ();
+        entity.Property (e => e.CreatedAt).ValueGeneratedOnAdd ();
+        entity.Property (e => e.LastUpdatedAt).ValueGeneratedOnAddOrUpdate ();
+
+        entity.Property(e => e.CreatedAt).Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
+        entity.Property(e => e.CreatedAt).Metadata.SetAfterSaveBehavior(PropertySaveBehavior.Ignore);
+        entity.Property(e => e.LastUpdatedAt).Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
+        entity.Property(e => e.LastUpdatedAt).Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
       });
 
       modelBuilder.Entity<Garage> (entity =>
       {
-        entity.Property (e => e.CreatedAt).HasDefaultValueSql ("CURRENT_TIMESTAMP").ValueGeneratedOnAdd ();
-        entity.Property (e => e.LastUpdatedAt).HasDefaultValueSql ("CURRENT_TIMESTAMP").ValueGeneratedOnAddOrUpdate ();
+        entity.Property (e => e.CreatedAt).ValueGeneratedOnAdd ();
+        entity.Property (e => e.LastUpdatedAt).ValueGeneratedOnAddOrUpdate ();
+
+        entity.Property(e => e.CreatedAt).Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
+        entity.Property(e => e.CreatedAt).Metadata.SetAfterSaveBehavior(PropertySaveBehavior.Ignore);
+        entity.Property(e => e.LastUpdatedAt).Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
+        entity.Property(e => e.LastUpdatedAt).Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
       });
 
       modelBuilder.Entity<Review> (entity =>
       {
-        entity.Property (e => e.CreatedAt).HasDefaultValueSql ("CURRENT_TIMESTAMP").ValueGeneratedOnAdd ();
-        entity.Property (e => e.LastUpdatedAt).HasDefaultValueSql ("CURRENT_TIMESTAMP").ValueGeneratedOnAddOrUpdate ();
+        entity.Property (e => e.CreatedAt).ValueGeneratedOnAdd ();
+        entity.Property (e => e.LastUpdatedAt).ValueGeneratedOnAddOrUpdate ();
+
+        entity.Property(e => e.CreatedAt).Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
+        entity.Property(e => e.CreatedAt).Metadata.SetAfterSaveBehavior(PropertySaveBehavior.Ignore);
+        entity.Property(e => e.LastUpdatedAt).Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
+        entity.Property(e => e.LastUpdatedAt).Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
       });
 
       modelBuilder.Entity<Address> (entity =>
       {
-        entity.Property (e => e.CreatedAt).HasDefaultValueSql ("CURRENT_TIMESTAMP").ValueGeneratedOnAdd ();
-        entity.Property (e => e.LastUpdatedAt).HasDefaultValueSql ("CURRENT_TIMESTAMP").ValueGeneratedOnAddOrUpdate ();
+        entity.Property (e => e.CreatedAt).ValueGeneratedOnAdd ();
+        entity.Property (e => e.LastUpdatedAt).ValueGeneratedOnAddOrUpdate ();
+
+        entity.Property(e => e.CreatedAt).Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
+        entity.Property(e => e.CreatedAt).Metadata.SetAfterSaveBehavior(PropertySaveBehavior.Ignore);
+        entity.Property(e => e.LastUpdatedAt).Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
+        entity.Property(e => e.LastUpdatedAt).Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
       });
 
       modelBuilder.Entity<Invoice> (entity =>
       {
-        entity.Property (e => e.CreatedAt).HasDefaultValueSql ("CURRENT_TIMESTAMP").ValueGeneratedOnAdd ();
-        entity.Property (e => e.LastUpdatedAt).HasDefaultValueSql ("NOW()").ValueGeneratedOnAddOrUpdate();
+        entity.Property (e => e.CreatedAt).ValueGeneratedOnAdd ();
+        entity.Property (e => e.LastUpdatedAt).ValueGeneratedOnAddOrUpdate ();
+
+        entity.Property(e => e.CreatedAt).Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
+        entity.Property(e => e.CreatedAt).Metadata.SetAfterSaveBehavior(PropertySaveBehavior.Ignore);
+        entity.Property(e => e.LastUpdatedAt).Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
+        entity.Property(e => e.LastUpdatedAt).Metadata.SetBeforeSaveBehavior(PropertySaveBehavior.Ignore);
       });
 
       IEnumerable<User> users = DataLoader.LoadJson<User> ("Users");
