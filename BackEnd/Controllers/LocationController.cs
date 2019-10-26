@@ -81,9 +81,9 @@ namespace BackEnd.Controllers
       {
         DistanceDTO dist = new DistanceDTO
         {
-          Duration = distances[count].Duration.Text,
-          DurationTraffic = distances[count].DurationInTraffic.Text,
-          Distance = distances[count].Distance.Text
+          Duration = distances[count].Duration?.Text,
+          DurationTraffic = distances[count].DurationInTraffic?.Text,
+          Distance = distances[count].Distance?.Text
         };
         
         garageDistances.Add(new GarageDistanceDTO
