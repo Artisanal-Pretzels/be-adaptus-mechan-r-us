@@ -12,10 +12,6 @@ namespace BackEnd.Data
     {
       string path = $"Data/prod-data/{file}.json";
 
-#if DEBUG
-      path = $"Data/test-data/{file}.json";
-#endif
-
       using (StreamReader r = new StreamReader (path))
       {
         string json = r.ReadToEnd ();
