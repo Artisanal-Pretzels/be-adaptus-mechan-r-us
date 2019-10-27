@@ -1,0 +1,102 @@
+[
+  {
+    "AddressID": 1,
+    "Latitude": 53.4994478,
+    "Longitude": -2.2026933,
+    "LineOne": "Quantum Park",
+    "LineTwo": "Monsall Rd",
+    "County": "Greater Manchester",
+    "Postcode": "M40 8FY",
+    "GarageID": 1
+  },
+  {
+    "AddressID": 2,
+    "Latitude": 53.5019833,
+    "Longitude": -2.2276524,
+    "LineOne": "Queens Rd",
+    "LineTwo": "",
+    "County": "Greater Manchester",
+    "Postcode": "M8 0RB",
+    "GarageID": 2
+  },
+  {
+    "AddressID": 3,
+    "Latitude": 53.5011793,
+    "Longitude": -2.2608823,
+    "LineOne": "7 Firth Cl",
+    "LineTwo": "Salford",
+    "County": "Greater Manchester",
+    "Postcode": "M7 2YD",
+    "GarageID": 3
+  },
+  {
+    "AddressID": 4,
+    "Latitude": 53.4758512,
+    "Longitude": -2.2485709,
+    "LineOne": "16-17 Watson St",
+    "LineTwo": "",
+    "County": "Greater Manchester",
+    "Postcode": "M3 4LP",
+    "GarageID": 4
+  },
+  {
+    "AddressID": 5,
+    "Latitude": 53.4740632,
+    "Longitude": -2.2389632,
+    "LineOne": "45 York St",
+    "LineTwo": "",
+    "County": "Greater Manchester",
+    "Postcode": "M1 7DE",
+    "GarageID": 5
+  },
+  {
+    "AddressID": 6,
+    "Latitude": 53.4705446,
+    "Longitude": -2.1930224,
+    "LineOne": "21 Textile St",
+    "LineTwo": "",
+    "County": "Greater Manchester",
+    "Postcode": "M12 5DJ",
+    "GarageID": 6
+  },
+  {
+    "AddressID": 7,
+    "Latitude": 53.446659,
+    "Longitude": -2.238743,
+    "LineOne": "334-336 Platt Ln",
+    "LineTwo": "",
+    "County": "Greater Manchester",
+    "Postcode": "M14 7DA",
+    "GarageID": 7
+  },
+  {
+    "AddressID": 8,
+    "Latitude": 53.4763173,
+    "Longitude": -2.1619087,
+    "LineOne": "70 Edge Ln",
+    "LineTwo": "Droylsden",
+    "County": "Greater Manchester",
+    "Postcode": "M43 6BA",
+    "GarageID": 8
+  },
+  {
+    "AddressID": 9,
+    "Latitude": 53.4854697,
+    "Longitude": -2.250765,
+    "LineOne": "3 Blackfriars Rd",
+    "LineTwo": "Salford",
+    "County": "Greater Manchester",
+    "Postcode": "M3 7AQ",
+    "GarageID": 9
+  },
+  {
+    "AddressID": 10,
+    "Latitude": 53.4935955,
+    "Longitude": -2.2351911,
+    "LineOne": "3 Collingham St",
+    "LineTwo": "",
+    "County": "Greater Manchester",
+    "Postcode": "M8 8RQ",
+    "GarageID": 10
+  }
+]

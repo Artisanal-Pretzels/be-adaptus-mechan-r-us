@@ -1,0 +1,233 @@
+[
+  {
+    "ReviewID": 1,
+    "Rating": 5,
+    "GarageID": 1,
+    "UserID": 11,
+    "Body": "Very fast serivce and got on the road quickly"
+  },
+  {
+    "ReviewID": 2,
+    "Rating": 5,
+    "GarageID": 1,
+    "UserID": 14,
+    "Body": "Fixed on site quickly"
+  },
+  {
+    "ReviewID": 3,
+    "Rating": 2,
+    "GarageID": 1,
+    "UserID": 16,
+    "Body": "Said would take an hour but ended up three, took too long"
+  },
+  {
+    "ReviewID": 4,
+    "Rating": 3,
+    "GarageID": 2,
+    "UserID": 12,
+    "Body": "Slow arriving but fixed car quickly"
+  },
+  {
+    "ReviewID": 5,
+    "Rating": 4,
+    "GarageID": 2,
+    "UserID": 22,
+    "Body": "Great service and prices. Very good Staff"
+  },
+  {
+    "ReviewID": 6,
+    "Rating": 2,
+    "GarageID": 2,
+    "UserID": 19,
+    "Body": "Far too long waiting for them"
+  },
+  {
+    "ReviewID": 7,
+    "Rating": 3,
+    "GarageID": 3,
+    "UserID": 14,
+    "Body": "Good service but pricey"
+  },
+  {
+    "ReviewID": 8,
+    "Rating": 5,
+    "GarageID": 3,
+    "UserID": 17,
+    "Body": "Excellent service, quick response"
+  },
+  {
+    "ReviewID": 9,
+    "Rating": 4,
+    "GarageID": 4,
+    "UserID": 11,
+    "Body": "Quick arrival and mechanic very nice"
+  },
+  {
+    "ReviewID": 10,
+    "Rating": 1,
+    "GarageID": 4,
+    "UserID": 12,
+    "Body": "Said could fix car on site but had they had to tow it back to their garage"
+  },
+  {
+    "ReviewID": 11,
+    "Rating": 5,
+    "GarageID": 4,
+    "UserID": 13,
+    "Body": "Speedy service and on road quickly"
+  },
+  {
+    "ReviewID": 12,
+    "Rating": 4,
+    "GarageID": 4,
+    "UserID": 14,
+    "Body": "Super fast service but quite dear"
+  },
+  {
+    "ReviewID": 13,
+    "Rating": 4,
+    "GarageID": 5,
+    "UserID": 20,
+    "Body": "Great service"
+  },
+  {
+    "ReviewID": 14,
+    "Rating": 2,
+    "GarageID": 6,
+    "UserID": 14,
+    "Body": "Arrived quickly but took long time fixing car"
+  },
+  {
+    "ReviewID": 15,
+    "Rating": 3,
+    "GarageID": 6,
+    "UserID": 15,
+    "Body": "Arrived ten minutes later than they said and took while to get car running"
+  },
+  {
+    "ReviewID": 16,
+    "Rating": 1,
+    "GarageID": 6,
+    "UserID": 16,
+    "Body": "Too slow and pricey, would not recommend"
+  },
+  {
+    "ReviewID": 17,
+    "Rating": 5,
+    "GarageID": 7,
+    "UserID": 17,
+    "Body": "Top work on my van"
+  },
+  {
+    "ReviewID": 18,
+    "Rating": 5,
+    "GarageID": 7,
+    "UserID": 18,
+    "Body": "Super fast service and fixed within minutes"
+  },
+  {
+    "ReviewID": 19,
+    "Rating": 4,
+    "GarageID": 7,
+    "UserID": 19,
+    "Body": "Friendly & helpful service with quick resolution."
+  },
+  {
+    "ReviewID": 20,
+    "Rating": 1,
+    "GarageID": 8,
+    "UserID": 20,
+    "Body": "Overpriced"
+  },
+  {
+    "ReviewID": 21,
+    "Rating": 5,
+    "GarageID": 8,
+    "UserID": 21,
+    "Body": "Lovely friendly guys! Fast and efficient service. Thanks very much."
+  },
+  {
+    "ReviewID": 22,
+    "Rating": 4,
+    "GarageID": 8,
+    "UserID": 22,
+    "Body": "Proper family honest garage service, quick response and friendly."
+  },
+  {
+    "ReviewID": 23,
+    "Rating": 2,
+    "GarageID": 8,
+    "UserID": 23,
+    "Body": "Took too long, felt like wasted time"
+  },
+  {
+    "ReviewID": 24,
+    "Rating": 5,
+    "GarageID": 9,
+    "UserID": 22,
+    "Body": "Brilliant professional and friendly service, at very reasonable prices."
+  },
+  {
+    "ReviewID": 25,
+    "Rating": 4,
+    "GarageID": 9,
+    "UserID": 12,
+    "Body": "Competent mechanics. Don't try and do loads of unnecessary work. A good job at a good price"
+  },
+  {
+    "ReviewID": 26,
+    "Rating": 3,
+    "GarageID": 9,
+    "UserID": 11,
+    "Body": "Acceptable service"
+  },
+  {
+    "ReviewID": 27,
+    "Rating": 5,
+    "GarageID": 9,
+    "UserID": 15,
+    "Body": "10/10 quality service."
+  },
+  {
+    "ReviewID": 28,
+    "Rating": 4,
+    "GarageID": 9,
+    "UserID": 18,
+    "Body": "A great service as always. A huge THANK YOU."
+  },
+  {
+    "ReviewID": 29,
+    "Rating": 4,
+    "GarageID": 9,
+    "UserID": 17,
+    "Body": "Used this garage on several occasions, first class service. The Staff are always very pleasant and helpful."
+  },
+  {
+    "ReviewID": 30,
+    "Rating": 1,
+    "GarageID": 10,
+    "UserID": 16,
+    "Body": "Took too long to arrive, said would be 30 minutes but it was hour and half, unacceptable"
+  },
+  {
+    "ReviewID": 31,
+    "Rating": 4,
+    "GarageID": 10,
+    "UserID": 15,
+    "Body": "Good place for quick recovery"
+  },
+  {
+    "ReviewID": 32,
+    "Rating": 5,
+    "GarageID": 10,
+    "UserID": 19,
+    "Body": "Very friendly staff, quick response"
+  },
+  {
+    "ReviewID": 33,
+    "Rating": 5,
+    "GarageID": 10,
+    "UserID": 20,
+    "Body": "Amazingly fast service, got on road again in no time"
+  }
+]
