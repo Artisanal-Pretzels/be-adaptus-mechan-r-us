@@ -8,24 +8,30 @@ namespace BackEnd.Data
   public static class DataLoader
   {
 
-    public static IEnumerable<T> LoadJson<T>(string file)
+    public static IEnumerable<T> LoadJson<T> (string file)
     {
-      using (StreamReader r = new StreamReader($"Data/test-data/{file}.json"))
+      string path = $"Data/prod-data/{file}.json";
+
+#if DEBUG
+      path = $"Data/test-data/{file}.json";
+#endif
+
+      using (StreamReader r = new StreamReader (path))
       {
-        string json = r.ReadToEnd();
-        IEnumerable<T> Hi = JsonConvert.DeserializeObject<List<T>>(json);
-        return Hi;
+        string json = r.ReadToEnd ();
+        IEnumerable<T> dataObject = JsonConvert.DeserializeObject<List<T>> (json);
+        return dataObject;
       }
     }
 
-    public static string LoadEndpoints()
+    public static string LoadEndpoints ()
     {
-      using (StreamReader r = new StreamReader("Data/endpoints.json"))
+      using (StreamReader r = new StreamReader ("Data/endpoints.json"))
       {
-        string json = r.ReadToEnd();
+        string json = r.ReadToEnd ();
 
-        ApiEndpoint endpoints = JsonConvert.DeserializeObject<ApiEndpoint>(json);
-        string endpointsString = JsonConvert.SerializeObject(endpoints, Formatting.Indented);
+        ApiEndpoint endpoints = JsonConvert.DeserializeObject<ApiEndpoint> (json);
+        string endpointsString = JsonConvert.SerializeObject (endpoints, Formatting.Indented);
 
         return endpointsString;
       }
