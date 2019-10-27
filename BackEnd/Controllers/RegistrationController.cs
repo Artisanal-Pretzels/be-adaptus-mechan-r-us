@@ -10,34 +10,50 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BackEnd.Controllers
 {
-  [Route("api/[controller]")]
+  [Route ("api/[controller]")]
   [ApiController]
   public class RegistrationController : ControllerBase
   {
     private readonly AmruDbContext _context;
 
-    public RegistrationController(AmruDbContext context)
+    public RegistrationController (AmruDbContext context)
     {
       _context = context;
     }
 
     [HttpPost]
-    public async Task<ActionResult<UserDTO>> Post(UserRegistration request)
+    public async Task<ActionResult<UserDTO>> Post (UserRegistration request)
     {
-      User newUser = new User()
+      User newUser = new User ()
       {
         Username = request.Username,
         Password = request.Password,
         Name = request.Name,
         Email = request.Email,
-        PhoneNumber = new PhoneNumber() { Number = request.PhoneNumber },
-        PaymentEmail = request.PaymentEmail
+        PhoneNumber = new PhoneNumber () { Number = request.PhoneNumber },
+        PaymentEmail = request.PaymentEmail,
+        Garage = new Garage ()
+        {
+        GarageName = request.GarageName,
+        Description = request.GarageDescription,
+        ImagePath = request.GarageImagePath,
+        PaymentEmail = request.GaragePaymentEmail,
+        BasePrice = request.GarageBasePrice,
+        Address = new Address ()
+        {
+        LineOne = request.GarageAddressLineOne,
+        LineTwo = request.GarageAddressLineTwo,
+        County = request.GarageAddressCounty,
+        PostCode = request.GarageAddressPostCode
+        }
+
+        }
       };
 
-      _context.Users.Add(newUser);
-      await _context.SaveChangesAsync();
+      _context.Users.Add (newUser);
+      await _context.SaveChangesAsync ();
 
-      UserDTO userDto = new UserDTO()
+      UserDTO userDto = new UserDTO ()
       {
         UserID = newUser.UserID,
         Username = newUser.Username,
@@ -47,7 +63,7 @@ namespace BackEnd.Controllers
         GarageID = newUser.Garage?.GarageID
       };
 
-      return Ok(userDto);
+      return Ok (userDto);
     }
   }
 }
