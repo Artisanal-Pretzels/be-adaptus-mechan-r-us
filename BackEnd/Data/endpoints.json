@@ -122,12 +122,21 @@
           "description": "creates new user and returns created user",
           "queries": [],
           "exampleRequestBody": {
-            "Username": "dolore",
-            "Password": "aliqua",
+            "Username": "newUser",
+            "Password": "upw",
             "Email": "test@1.com",
             "Name": "Full name",
-            "PaymentEmail": "test",
-            "PhoneNumber": "093843242"
+            "PaymentEmail": "paymentemial",
+            "PhoneNumber": "093843242",
+            "GarageName": "garage name",
+            "GarageDescription": "best garage ever",
+            "GarageImagePath": "img url",
+            "GarageBasePrice": 5,
+            "GaragePaymentEmail": "garage pay email",
+            "GarageAddressLineOne": "line1",
+            "GarageAddressLineTwo": "line2",
+            "GarageAddressCounty": "county",
+            "GarageAddressPostCode": "postcode"
           },
           "exampleResponse": {
             "userID": 11,
@@ -135,7 +144,7 @@
             "name": "Full name",
             "email": "test@1.com",
             "phoneNumber": "093843242",
-            "garageID": null
+            "garageID": 10
           }
         }
       }
