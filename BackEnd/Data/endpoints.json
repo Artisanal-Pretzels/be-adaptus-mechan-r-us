@@ -71,7 +71,7 @@
               {
                 "reviewID": 5,
                 "rating": 4,
-                "body": " y4ez y4ez yz y4 ",
+                "body": "Excellent service, quick response",
                 "username": "consectetur"
               }
             ]
@@ -124,26 +124,26 @@
           "exampleRequestBody": {
             "Username": "newUser",
             "Password": "upw",
-            "Email": "test@1.com",
+            "Email": "user@email.com",
             "Name": "Full name",
-            "PaymentEmail": "paymentemial",
-            "PhoneNumber": "093843242",
-            "GarageName": "garage name",
-            "GarageDescription": "best garage ever",
-            "GarageImagePath": "img url",
-            "GarageBasePrice": 5,
-            "GaragePaymentEmail": "garage pay email",
-            "GarageAddressLineOne": "line1",
-            "GarageAddressLineTwo": "line2",
-            "GarageAddressCounty": "county",
-            "GarageAddressPostCode": "postcode"
+            "PaymentEmail": "payment@email.com",
+            "PhoneNumber": "(975) 562-3728",
+            "GarageName": "Garage Auto Services",
+            "GarageDescription": "Family run business with proven track record of quick recovery times",
+            "GarageImagePath": "http://placehold.it/32x32",
+            "GarageBasePrice": 50,
+            "GaragePaymentEmail": "payment@email.com",
+            "GarageAddressLineOne": "159 Irving Street",
+            "GarageAddressLineTwo": "",
+            "GarageAddressCounty": "Greater Manchester",
+            "GarageAddressPostCode": "M4 5HU"
           },
           "exampleResponse": {
             "userID": 11,
-            "username": "dolore",
+            "username": "newUser",
             "name": "Full name",
-            "email": "test@1.com",
-            "phoneNumber": "093843242",
+            "email": "user@email.com",
+            "phoneNumber": "(975) 562-3728",
             "garageID": 10
           }
         }
