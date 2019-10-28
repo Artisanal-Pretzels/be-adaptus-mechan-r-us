@@ -1,0 +1,52 @@
+[
+  {
+    "InvoiceID": 1,
+    "GarageID": 1,
+    "UserID": 11
+  },
+  {
+    "InvoiceID": 2,
+    "GarageID": 2,
+    "UserID": 12
+  },
+  {
+    "InvoiceID": 3,
+    "GarageID": 3,
+    "UserID": 13
+  },
+  {
+    "InvoiceID": 4,
+    "GarageID": 4,
+    "UserID": 14
+  },
+  {
+    "InvoiceID": 5,
+    "GarageID": 5,
+    "UserID": 15
+  },
+  {
+    "InvoiceID": 6,
+    "GarageID": 6,
+    "UserID": 16
+  },
+  {
+    "InvoiceID": 7,
+    "GarageID": 7,
+    "UserID": 17
+  },
+  {
+    "InvoiceID": 8,
+    "GarageID": 8,
+    "UserID": 18
+  },
+  {
+    "InvoiceID": 9,
+    "GarageID": 9,
+    "UserID": 19
+  },
+  {
+    "InvoiceID": 10,
+    "GarageID": 10,
+    "UserID": 20
+  }
+]
