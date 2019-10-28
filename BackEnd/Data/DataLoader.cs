@@ -8,7 +8,7 @@ namespace BackEnd.Data
   public static class DataLoader
   {
 
-    public static IEnumerable<T> LoadJson<T> (string file)
+    public static IEnumerable<T> LoadJson<T>(string file)
     {
       string path = $"Data/prod-data/{file}.json";
 
