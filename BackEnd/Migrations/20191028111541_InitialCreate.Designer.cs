@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BackEnd.Migrations
 {
     [DbContext(typeof(AmruDbContext))]
-    [Migration("20191027192447_InitialCreate")]
+    [Migration("20191028111541_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -225,6 +225,10 @@ namespace BackEnd.Migrations
                         .HasColumnType("varchar(200)")
                         .HasMaxLength(200);
 
+                    b.Property<double>("HourlyRate")
+                        .HasColumnName("Hourly_Rate")
+                        .HasColumnType("double");
+
                     b.Property<string>("ImagePath")
                         .HasColumnType("longtext");
 
@@ -255,6 +259,7 @@ namespace BackEnd.Migrations
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Manchester's Leading Accident Repair Centre. Sapphire Garage was founded 25 years ago in one small unit on a trading estate in East Manchester.",
                             GarageName = "Sapphire Garage",
+                            HourlyRate = 20.0,
                             ImagePath = "http://www.sapphiregarage.co.uk/wp-content/uploads/2017/05/sapphire_garage_logo.png",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PaymentEmail = "payment@sapphiregarage.co.uk",
@@ -267,6 +272,7 @@ namespace BackEnd.Migrations
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Local garage run by two mechanics",
                             GarageName = "Queens Garage",
+                            HourlyRate = 21.0,
                             ImagePath = "http://placehold.it/32x32",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PaymentEmail = "admin@queensgarage.com",
@@ -279,6 +285,7 @@ namespace BackEnd.Migrations
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Alternator and Starter Motor specialists. Servicing vehicles in Salford and Greater Manchester for over 35 years.",
                             GarageName = "EMS GARAGE",
+                            HourlyRate = 26.0,
                             ImagePath = "http://placehold.it/32x32",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PaymentEmail = "payment@emsgarage.co.uk",
@@ -291,6 +298,7 @@ namespace BackEnd.Migrations
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "One of the largest independent Service Centres and MOT Stations in Manchester City Centre.",
                             GarageName = "Duffy Motors",
+                            HourlyRate = 38.0,
                             ImagePath = "https://duffymotors.co.uk/wp-content/themes/duffy/library/img/logo.png",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PaymentEmail = "payment@duffymotors.co.uk",
@@ -303,6 +311,7 @@ namespace BackEnd.Migrations
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "DC Motor Engineers Garage is a premium MOT Testing Centre, car servicing and repair facility. Based in the centre of Manchester, 2 minutes walk from oxford road station and the University, our garage offers an unparalleled service.",
                             GarageName = "DC Motor Engineers",
+                            HourlyRate = 21.0,
                             ImagePath = "http://placehold.it/32x32",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PaymentEmail = "payment@mot-test-manchester.co.uk",
@@ -315,6 +324,7 @@ namespace BackEnd.Migrations
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Small team of dedicated mechanics with long track record of excellent service and recovery",
                             GarageName = "Birch Lane Garage",
+                            HourlyRate = 32.0,
                             ImagePath = "http://placehold.it/32x32",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PaymentEmail = "charlie@birchlanegarage.com",
@@ -327,6 +337,7 @@ namespace BackEnd.Migrations
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "We are one of the leading car repair garages serving customers in Manchester. All mechanic services are performed by highly qualified mechanics.",
                             GarageName = "Platt Lane Garage",
+                            HourlyRate = 27.0,
                             ImagePath = "http://placehold.it/32x32",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PaymentEmail = "payment@plattlanegarage.co.uk",
@@ -339,6 +350,7 @@ namespace BackEnd.Migrations
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Established since 1920, Bradford Garage Ltd has been owned by the Spence family since 1963.",
                             GarageName = "Bradford Garage",
+                            HourlyRate = 24.0,
                             ImagePath = "http://placehold.it/32x32",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PaymentEmail = "payment@bradfordgarage.co.uk",
@@ -351,6 +363,7 @@ namespace BackEnd.Migrations
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Local garage with excellent services",
                             GarageName = "A Everall Garage",
+                            HourlyRate = 19.0,
                             ImagePath = "http://placehold.it/32x32",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PaymentEmail = "payment@aeverallgarage.com",
@@ -363,6 +376,7 @@ namespace BackEnd.Migrations
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Description = "Best Auto services in town.",
                             GarageName = "Z Cars Auto Services",
+                            HourlyRate = 33.0,
                             ImagePath = "http://placehold.it/32x32",
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PaymentEmail = "payment@zcarsautoservices.com",
@@ -383,9 +397,19 @@ namespace BackEnd.Migrations
                     b.Property<uint>("GarageID")
                         .HasColumnType("int unsigned");
 
+                    b.Property<double>("Hours")
+                        .HasColumnType("double");
+
                     b.Property<DateTime>("LastUpdatedAt")
                         .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("datetime(6)");
+
+                    b.Property<double>("Parts")
+                        .HasColumnType("double");
+
+                    b.Property<double?>("RecoveryFee")
+                        .HasColumnName("Recovery_Fee")
+                        .HasColumnType("double");
 
                     b.Property<uint>("UserID")
                         .HasColumnType("int unsigned");
@@ -404,80 +428,164 @@ namespace BackEnd.Migrations
                             InvoiceID = 1u,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             GarageID = 1u,
+                            Hours = 1.0,
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserID = 11u
+                            Parts = 0.0,
+                            UserID = 12u
                         },
                         new
                         {
                             InvoiceID = 2u,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             GarageID = 2u,
+                            Hours = 0.69999999999999996,
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Parts = 20.0,
                             UserID = 12u
                         },
                         new
                         {
                             InvoiceID = 3u,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            GarageID = 3u,
+                            GarageID = 2u,
+                            Hours = 1.2,
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Parts = 5.0,
                             UserID = 13u
                         },
                         new
                         {
                             InvoiceID = 4u,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            GarageID = 4u,
+                            GarageID = 3u,
+                            Hours = 0.59999999999999998,
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserID = 14u
+                            Parts = 12.0,
+                            UserID = 13u
                         },
                         new
                         {
                             InvoiceID = 5u,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            GarageID = 5u,
+                            GarageID = 3u,
+                            Hours = 2.0,
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserID = 15u
+                            Parts = 40.0,
+                            UserID = 14u
                         },
                         new
                         {
                             InvoiceID = 6u,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             GarageID = 6u,
+                            Hours = 1.3999999999999999,
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserID = 16u
+                            Parts = 0.0,
+                            RecoveryFee = 100.0,
+                            UserID = 14u
                         },
                         new
                         {
                             InvoiceID = 7u,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            GarageID = 7u,
+                            GarageID = 5u,
+                            Hours = 0.90000000000000002,
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserID = 17u
+                            Parts = 10.0,
+                            UserID = 15u
                         },
                         new
                         {
                             InvoiceID = 8u,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            GarageID = 8u,
+                            GarageID = 6u,
+                            Hours = 0.69999999999999996,
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserID = 18u
+                            Parts = 0.0,
+                            UserID = 15u
                         },
                         new
                         {
                             InvoiceID = 9u,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            GarageID = 9u,
+                            GarageID = 3u,
+                            Hours = 1.0,
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserID = 19u
+                            Parts = 5.6799999999999997,
+                            UserID = 16u
                         },
                         new
                         {
                             InvoiceID = 10u,
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            GarageID = 10u,
+                            GarageID = 8u,
+                            Hours = 1.0,
                             LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            UserID = 20u
+                            Parts = 0.0,
+                            RecoveryFee = 120.0,
+                            UserID = 16u
+                        },
+                        new
+                        {
+                            InvoiceID = 11u,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GarageID = 9u,
+                            Hours = 1.2,
+                            LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Parts = 2.7000000000000002,
+                            RecoveryFee = 100.0,
+                            UserID = 17u
+                        },
+                        new
+                        {
+                            InvoiceID = 12u,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GarageID = 10u,
+                            Hours = 1.0,
+                            LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Parts = 4.0,
+                            UserID = 17u
+                        },
+                        new
+                        {
+                            InvoiceID = 13u,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GarageID = 10u,
+                            Hours = 1.0,
+                            LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Parts = 4.0,
+                            UserID = 18u
+                        },
+                        new
+                        {
+                            InvoiceID = 14u,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GarageID = 10u,
+                            Hours = 1.7,
+                            LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Parts = 30.0,
+                            UserID = 18u
+                        },
+                        new
+                        {
+                            InvoiceID = 15u,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GarageID = 2u,
+                            Hours = 1.5,
+                            LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Parts = 12.0,
+                            UserID = 19u
+                        },
+                        new
+                        {
+                            InvoiceID = 16u,
+                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            GarageID = 5u,
+                            Hours = 1.0,
+                            LastUpdatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Parts = 0.0,
+                            RecoveryFee = 90.0,
+                            UserID = 19u
                         });
                 });
 

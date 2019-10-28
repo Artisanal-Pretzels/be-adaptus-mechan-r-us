@@ -64,7 +64,11 @@
             "invoices": [
               {
                 "invoiceID": 5,
-                "username": "consectetur"
+                "username": "consectetur",
+                "BasePrice": 13.0,
+                "Labour": 23.0,
+                "Parts": 10.0,
+                "RecoveryFee": null
               }
             ],
             "reviews": [

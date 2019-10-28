@@ -6,6 +6,7 @@
     "ImagePath": "http://www.sapphiregarage.co.uk/wp-content/uploads/2017/05/sapphire_garage_logo.png",
     "PaymentEmail": "payment@sapphiregarage.co.uk",
     "BasePrice": 80,
+    "HourlyRate": 20,
     "UserID": 1
   },
   {
@@ -15,6 +16,7 @@
     "ImagePath": "http://placehold.it/32x32",
     "PaymentEmail": "admin@queensgarage.com",
     "BasePrice": 50,
+    "HourlyRate": 21,
     "UserID": 2
   },
   {
@@ -24,6 +26,7 @@
     "ImagePath": "http://placehold.it/32x32",
     "PaymentEmail": "payment@emsgarage.co.uk",
     "BasePrice": 60,
+    "HourlyRate": 26,
     "UserID": 3
   },
   {
@@ -33,6 +36,7 @@
     "ImagePath": "https://duffymotors.co.uk/wp-content/themes/duffy/library/img/logo.png",
     "PaymentEmail": "payment@duffymotors.co.uk",
     "BasePrice": 68,
+    "HourlyRate": 38,
     "UserID": 4
   },
   {
@@ -42,6 +46,7 @@
     "ImagePath": "http://placehold.it/32x32",
     "PaymentEmail": "payment@mot-test-manchester.co.uk",
     "BasePrice": 90,
+    "HourlyRate": 21,
     "UserID": 5
   },
   {
@@ -51,6 +56,7 @@
     "ImagePath": "http://placehold.it/32x32",
     "PaymentEmail": "charlie@birchlanegarage.com",
     "BasePrice": 74,
+    "HourlyRate": 32,
     "UserID": 6
   },
   {
@@ -60,6 +66,7 @@
     "ImagePath": "http://placehold.it/32x32",
     "PaymentEmail": "payment@plattlanegarage.co.uk",
     "BasePrice": 87,
+    "HourlyRate": 27,
     "UserID": 7
   },
   {
@@ -69,6 +76,7 @@
     "ImagePath": "http://placehold.it/32x32",
     "PaymentEmail": "payment@bradfordgarage.co.uk",
     "BasePrice": 79,
+    "HourlyRate": 24,
     "UserID": 8
   },
   {
@@ -78,6 +86,7 @@
     "ImagePath": "http://placehold.it/32x32",
     "PaymentEmail": "payment@aeverallgarage.com",
     "BasePrice": 40,
+    "HourlyRate": 19,
     "UserID": 9
   },
   {
@@ -87,6 +96,7 @@
     "ImagePath": "http://placehold.it/32x32",
     "PaymentEmail": "payment@zcarsautoservices.com",
     "BasePrice": 55,
+    "HourlyRate": 33,
     "UserID": 10
   }
 ]

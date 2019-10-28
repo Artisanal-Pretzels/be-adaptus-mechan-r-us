@@ -1,52 +1,117 @@
-[
-  {
-    "InvoiceID": 1,
-    "GarageID": 1,
-    "UserID": 11
-  },
-  {
-    "InvoiceID": 2,
-    "GarageID": 2,
-    "UserID": 12
-  },
-  {
-    "InvoiceID": 3,
-    "GarageID": 3,
-    "UserID": 13
-  },
-  {
-    "InvoiceID": 4,
-    "GarageID": 4,
-    "UserID": 14
-  },
-  {
-    "InvoiceID": 5,
-    "GarageID": 5,
-    "UserID": 15
-  },
-  {
-    "InvoiceID": 6,
-    "GarageID": 6,
-    "UserID": 16
-  },
-  {
-    "InvoiceID": 7,
-    "GarageID": 7,
-    "UserID": 17
-  },
-  {
-    "InvoiceID": 8,
-    "GarageID": 8,
-    "UserID": 18
-  },
-  {
-    "InvoiceID": 9,
-    "GarageID": 9,
-    "UserID": 19
-  },
-  {
-    "InvoiceID": 10,
-    "GarageID": 10,
-    "UserID": 20
-  }
+[  {
+  "InvoiceID": 1,
+  "GarageID": 1,
+  "UserID": 12,
+  "Hours": 1,
+  "Parts": 0.00
+},
+{
+  "InvoiceID": 2,
+  "GarageID": 2,
+  "UserID": 12,
+  "Hours": 0.7,
+  "Parts": 20.00
+},
+{
+  "InvoiceID": 3,
+  "GarageID": 2,
+  "UserID": 13,
+  "Hours": 1.2,
+  "Parts": 5.00
+},
+{
+  "InvoiceID": 4,
+  "GarageID": 3,
+  "UserID": 13,
+  "Hours": 0.6,
+  "Parts": 12.0
+},
+{
+  "InvoiceID": 5,
+  "GarageID": 3,
+  "UserID": 14,
+  "Hours": 2,
+  "Parts": 40
+},
+{
+  "InvoiceID": 6,
+  "GarageID": 6,
+  "UserID": 14,
+  "Hours": 1.4,
+  "Parts": 0.00,
+  "RecoveryFee": 100
+},
+{
+  "InvoiceID": 7,
+  "GarageID": 5,
+  "UserID": 15,
+  "Hours": 0.9,
+  "Parts": 10.00
+},
+{
+  "InvoiceID": 8,
+  "GarageID": 6,
+  "UserID": 15,
+  "Hours": 0.7,
+  "Parts": 0.00
+},
+{
+  "InvoiceID": 9,
+  "GarageID": 3,
+  "UserID": 16,
+  "Hours": 1,
+  "Parts": 5.68
+},
+{
+  "InvoiceID": 10,
+  "GarageID": 8,
+  "UserID": 16,
+  "Hours": 1,
+  "Parts": 0.00,
+  "RecoveryFee": 120
+},
+{
+  "InvoiceID": 11,
+  "GarageID": 9,
+  "UserID": 17,
+  "Hours": 1.2,
+  "Parts": 2.70,
+  "RecoveryFee": 100
+},
+{
+  "InvoiceID": 12,
+  "GarageID": 10,
+  "UserID": 17,
+  "Hours": 1.0,
+  "Parts": 4.0
+},
+{
+  "InvoiceID": 13,
+  "GarageID": 10,
+  "UserID": 18,
+  "Hours": 1.0,
+  "Parts": 4.0
+},
+{
+  "InvoiceID": 14,
+  "GarageID": 10,
+  "UserID": 18,
+  "Hours": 1.7,
+  "Parts": 30.0
+},
+{
+  "InvoiceID": 15,
+  "GarageID": 2,
+  "UserID": 19,
+  "Hours": 1.5,
+  "Parts": 12.0
+},
+{
+  "InvoiceID": 16,
+  "GarageID": 5,
+  "UserID": 19,
+  "Hours": 1.0,
+  "Parts": 0.0,
+  "RecoveryFee": 90
+}
 ]

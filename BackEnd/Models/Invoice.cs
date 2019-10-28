@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BackEnd.Models
 {
@@ -12,6 +13,14 @@ namespace BackEnd.Models
     public uint UserID { get; set; }
 
     public Garage Garage { get; set; }
+
+
+    public double Hours { get; set; }
+
+    public double Parts { get; set; }
+
+    [Column("Recovery_Fee")]
+    public double? RecoveryFee { get; set; }
 
     public uint GarageID { get; set; }
 
