@@ -1,0 +1,92 @@
+[
+  {
+    "GarageID": 1,
+    "GarageName": "Sapphire Garage",
+    "Description": "Manchester's Leading Accident Repair Centre. Sapphire Garage was founded 25 years ago in one small unit on a trading estate in East Manchester.",
+    "ImagePath": "http://www.sapphiregarage.co.uk/wp-content/uploads/2017/05/sapphire_garage_logo.png",
+    "PaymentEmail": "payment@sapphiregarage.co.uk",
+    "BasePrice": 80,
+    "UserID": 1
+  },
+  {
+    "GarageID": 2,
+    "GarageName": "Queens Garage",
+    "Description": "Local garage run by two mechanics",
+    "ImagePath": "http://placehold.it/32x32",
+    "PaymentEmail": "admin@queensgarage.com",
+    "BasePrice": 50,
+    "UserID": 2
+  },
+  {
+    "GarageID": 3,
+    "GarageName": "EMS GARAGE",
+    "Description": "Alternator and Starter Motor specialists. Servicing vehicles in Salford and Greater Manchester for over 35 years.",
+    "ImagePath": "http://placehold.it/32x32",
+    "PaymentEmail": "payment@emsgarage.co.uk",
+    "BasePrice": 60,
+    "UserID": 3
+  },
+  {
+    "GarageID": 4,
+    "GarageName": "Duffy Motors",
+    "Description": "One of the largest independent Service Centres and MOT Stations in Manchester City Centre.",
+    "ImagePath": "https://duffymotors.co.uk/wp-content/themes/duffy/library/img/logo.png",
+    "PaymentEmail": "payment@duffymotors.co.uk",
+    "BasePrice": 68,
+    "UserID": 4
+  },
+  {
+    "GarageID": 5,
+    "GarageName": "DC Motor Engineers",
+    "Description": "DC Motor Engineers Garage is a premium MOT Testing Centre, car servicing and repair facility. Based in the centre of Manchester, 2 minutes walk from oxford road station and the University, our garage offers an unparalleled service.",
+    "ImagePath": "http://placehold.it/32x32",
+    "PaymentEmail": "payment@mot-test-manchester.co.uk",
+    "BasePrice": 90,
+    "UserID": 5
+  },
+  {
+    "GarageID": 6,
+    "GarageName": "Birch Lane Garage",
+    "Description": "Small team of dedicated mechanics with long track record of excellent service and recovery",
+    "ImagePath": "http://placehold.it/32x32",
+    "PaymentEmail": "charlie@birchlanegarage.com",
+    "BasePrice": 74,
+    "UserID": 6
+  },
+  {
+    "GarageID": 7,
+    "GarageName": "Platt Lane Garage",
+    "Description": "We are one of the leading car repair garages serving customers in Manchester. All mechanic services are performed by highly qualified mechanics.",
+    "ImagePath": "http://placehold.it/32x32",
+    "PaymentEmail": "payment@plattlanegarage.co.uk",
+    "BasePrice": 87,
+    "UserID": 7
+  },
+  {
+    "GarageID": 8,
+    "GarageName": "Bradford Garage",
+    "Description": "Established since 1920, Bradford Garage Ltd has been owned by the Spence family since 1963.",
+    "ImagePath": "http://placehold.it/32x32",
+    "PaymentEmail": "payment@bradfordgarage.co.uk",
+    "BasePrice": 79,
+    "UserID": 8
+  },
+  {
+    "GarageID": 9,
+    "GarageName": "A Everall Garage",
+    "Description": "Local garage with excellent services",
+    "ImagePath": "http://placehold.it/32x32",
+    "PaymentEmail": "payment@aeverallgarage.com",
+    "BasePrice": 40,
+    "UserID": 9
+  },
+  {
+    "GarageID": 10,
+    "GarageName": "Z Cars Auto Services",
+    "Description": "Best Auto services in town.",
+    "ImagePath": "http://placehold.it/32x32",
+    "PaymentEmail": "payment@zcarsautoservices.com",
+    "BasePrice": 55,
+    "UserID": 10
+  }
+]
