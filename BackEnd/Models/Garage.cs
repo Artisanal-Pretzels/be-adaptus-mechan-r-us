@@ -27,6 +27,9 @@ namespace BackEnd.Models
     [Column(TypeName = "double(5, 2)")]
     public double BasePrice { get; set; }
 
+    [Column("Hourly_Rate")]
+    public double HourlyRate { get; set; }
+
     public Address Address { get; set; }
 
     public User User { get; set; }

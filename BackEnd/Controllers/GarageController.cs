@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using BackEnd.Data;
@@ -44,9 +45,15 @@ namespace BackEnd.Controllers
         invoices.Add(new InvoiceDTO()
         {
           InvoiceID = invoice.InvoiceID,
-          Username = invoice.User.Username
+          Username = invoice.User.Username,
+          BasePrice = garage.BasePrice,
+          Labour = Math.Round(invoice.Hours * garage.HourlyRate, 2),
+          Parts = invoice.Parts,
+          RecoveryFee = invoice.RecoveryFee
         });
-      }
+
+ }
+
 
       foreach (var review in garage.Review)
       {
