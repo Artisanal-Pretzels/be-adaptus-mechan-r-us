@@ -6,6 +6,8 @@
 */nupkg/
 */**/packages/*
 !*/**/packages/build/
+*/**/bin
+*/**/obj
 
 # Visual Studio Code
 .vscode
@@ -40,3 +42,5 @@
 
 #API Key
 */ApiKey.cs
+
+webrtc-server/node_modules/
